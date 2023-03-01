@@ -1,0 +1,22 @@
+{
+  "name": "swag-labs-cypress.io",
+  "version": "1.0.0",
+  "description": "Projeto de testes automatizado utilizando Cypress.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonasCouto/Swag-Labs-Cypress.io.git"
+  },
+  "author": "Jonas Couto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonasCouto/Swag-Labs-Cypress.io/issues"
+  },
+  "homepage": "https://github.com/JonasCouto/Swag-Labs-Cypress.io#readme",
+  "devDependencies": {
+    "cypress": "^12.7.0"
+  }
+}
