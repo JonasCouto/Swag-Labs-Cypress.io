@@ -1,0 +1,75 @@
+Funcionalidade: Comprar produto
+Como um cliente
+Desejo escolher um produto na lista da página
+Para realizar uma compra
+
+
+1 Caso de teste POSITIVO
+ Cenário: Adicionar produto ao carrinho e realizar chekout com sucesso
+Dado que que na página inicial do site 
+Quando filtro os produtos por ordem alfabética
+Então devo ver uma lista ordenada de produtos 
+E clico no produto “Mochila Sauce Labs Backpack”
+Então devo ver a página do produto “Mochila Sauce Labs Backpack”
+E devo ver uma descrição do produto
+E devo ver o preço “$ 29,99”
+Quando clico no botão de “ADD TO CAR”
+Então devo ver uma mensagem de sucesso ‘’produto adicionado ao carrinho”
+E devo ver um ícone do carrinho com o número 1 ao lado
+Quando clico no ícone do carrinho com o número “1” ao lado 
+Então devo ver a página do carrinho
+E devo ver o produto “Mochila Sauce Labs Backpack” na lista de itens do carrinho
+E devo ver o preço “$29,99” na lista de itens do carrinho
+E devo ver o botão de “checkout”
+Quando clico no botão de “checkout”
+Então devo ver a página de checkout
+E devo ver o formulário de informações do cliente
+Quando preencho as informações com: First Name / Last Name/ Zip Code
+E clico no botão “Continue”
+Então devo ver a página de checkout overview
+E devo ver a quantidade “1”
+E devo ver uma descrição do produto
+E devo ver o preço “$ 29,99”
+E devo ver a informação de pagamento
+E devo ver informação de envio
+E devo ver o total do valor com taxas
+Quando clico no botão de “Finish”
+Então devo ver a mensagem de “THANK FOR YOR ORDER”
+-------------------------------------------------------------------------------------------
+2 Caso de teste NEGATIVO
+Cenário: Tentativa de realizar checkout sem adicionar produto no carrinho
+Dado que que na página inicial do site 
+Quando filtro os produtos por ordem alfabética
+Então devo ver uma lista ordenada de produtos 
+E clico no produto “Mochila Sauce Labs Backpack”
+Então devo ver a página do produto “Mochila Sauce Labs Backpack”
+E devo ver uma descrição do produto
+E devo ver o preço “$ 29,99”
+Quando clico no ícone de carrinho
+Então devo ver a página de checkout sem produtos
+E clico botão de “checkout” 
+Então devo ver a mensagem de “Carrinho vazio”
+--------------------------------------------------------------------------------------------
+3 Caso de teste NEGATIVO
+Cenário: Adicionar produto ao carrinho e não informo os dados pessoais no checkout
+Dado que que na página inicial do site 
+Quando filtro os produtos por ordem alfabética
+Então devo ver uma lista ordenada de produtos 
+E clico no produto “Mochila Sauce Labs Backpack”
+Então devo ver a página do produto “Mochila Sauce Labs Backpack”
+E devo ver uma descrição do produto
+E devo ver o preço “$ 29,99”
+Quando clico no botão de “ADD TO CAR”
+Então devo ver uma mensagem de sucesso ‘’produto adicionado ao carrinho”
+E devo ver um ícone do carrinho com o número 1 ao lado
+Quando clico no ícone do carrinho com o número “1” ao lado 
+Então devo ver a página do carrinho
+E devo ver o produto “Mochila Sauce Labs Backpack” na lista de itens do carrinho
+E devo ver o preço “$29,99” na lista de itens do carrinho
+E devo ver o botão de “checkout”
+Quando clico no botão de “checkout”
+Então devo ver a página de checkout
+E devo ver o formulário de informações do cliente
+Quando não preencho as informações como: First Name / Last Name / Zip Code
+E clico no botão “Continue”
+Então devo ver a mensagem de Erro “Necessário informar dados requeridos”
