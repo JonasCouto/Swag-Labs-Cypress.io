@@ -5,7 +5,7 @@ Para realizar uma compra
 
 
 1 Caso de teste POSITIVO
- Cenário: Adicionar produto ao carrinho e realizar chekout com sucesso
+Cenário: Adicionar produto ao carrinho e realizar chekout com sucesso
 Dado que que na página inicial do site 
 Quando filtro os produtos por ordem alfabética
 Então devo ver uma lista ordenada de produtos 
