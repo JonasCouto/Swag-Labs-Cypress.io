@@ -73,3 +73,20 @@ E devo ver o formulário de informações do cliente
 Quando não preencho as informações como: First Name / Last Name / Zip Code
 E clico no botão “Continue”
 Então devo ver a mensagem de Erro “Necessário informar dados requeridos”
+----------------------------------------------------------------------------------------
+4 Caso de teste NEGATIVO
+Cenário: Tentar finalizar a compra com um cartão de crédito invalido
+Dado que estou na página de checkout
+E preencho os campos obrigatórios com dados válidos
+E insiro um cartão com dados válidos
+Quando tento finalizar a compra 
+Então o sistema devera exibir uma mensagem "insira o numero do cartão de crédito válido"
+-----------------------------------------------------------------------------------------
+5 Cenário: Adicionar produto ao carrinho que não existe
+Dado que estou na página inicial da loja
+E eu busco pelo produto "Camiseta"
+E este produto não existe na loja
+Quando eu tento adicioná-lo ao carrinho
+Então o sistema deve exibir a mensagem de erro "Este produto não está disponível na loja"
+
+
