@@ -23,3 +23,28 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('addRecord', (user) => {
+    
+    cy.fixture(user)
+    .then((user) => {
+
+        cy.get('[data-test="firstName"]')
+        .should('be.visible')
+        .type(user.name)
+        .should('have.value', user.name)
+
+        cy.get('[data-test="lastName"]')
+        .should('be.visible')
+        .type(user.lastName)
+        .should('have.value', user.lastName)
+
+        cy.get('[data-test="postalCode"]')
+        .should('be.visible')
+        .type(user.postalCode)
+        .should('have.value', user.postalCode)
+
+        
+    })
+    
+})
