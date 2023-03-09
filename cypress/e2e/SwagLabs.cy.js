@@ -5,57 +5,46 @@ describe('template spec', () => {
   });
 
 
-  // it('Adicionar produtos no carrinho até finalizar', () => {
-  //   cy.get('.product_sort_container')
-  //   .select('Name (A to Z)')
-  //   .should('have.value', 'az')
+  it.only('Adicionar produtos no carrinho até finalizar', () => {
 
-  //   // Enter in cart
-  //   cy.get(':nth-child(1) > .pricebar > .btn_primary')  
-  //   .click()
+
+    cy.get('.product_sort_container')
+    .select('Name (A to Z)')
+    .should('have.value', 'az')
+
+    // Enter in cart
+    cy.get(':nth-child(1) > .pricebar > .btn_primary')  
+    .click()
     
-  //   // Enter in cart
-  //   cy.get('#shopping_cart_container')
-  //   .click()
+    // Enter in cart
+    cy.get('#shopping_cart_container')
+    .click()
 
-  //   // enter in checkout
-  //   cy.get('.btn_action')
-  //   .click()
+    // enter in checkout
+    cy.get('.btn_action')
+    .click()
+
+    // Cria novo usuário
+    cy.addRecord('user.json')
     
-  //   // write the first name of clients
-  //   cy.get('[data-test="firstName"]')
-  //   .should('be.visible')
-  //   .type('José')
-  //   .should('have.value', 'José')
+    // click on the button continue
+    cy.get('.btn_primary')
+    .click()
 
-  //   // write the last name of clients
-  //   cy.get('[data-test="lastName"]')
-  //   .should('be.visible')
-  //   .type('Abreu')
-  //   .should('have.value', 'Abreu')
+    // click on the button finish
+    cy.get('.btn_action')
+    .click()
 
-  //   // write the zip-code of clients
-  //   cy.get('[data-test="postalCode"]')
-  //   .should('be.visible')
-  //   .type('91520120')
-  //   .should('have.value', '91520120')
-    
-  //   // click on the button continue
-  //   cy.get('.btn_primary')
-  //   .click()
-
-  //   // click on the button finish
-  //   cy.get('.btn_action')
-  //   .click()
-
-  //   // visibility message of positive
-  //   cy.get('.complete-header')
-  //   .should('be.visible')
+    // visibility message of positive
+    cy.get('.complete-header')
+    .should('be.visible')
     
     
-  // })
+  })
   
-  it.only('Tentativa de realizar checkout sem adicionar produto no carrinho', () => {
+  it('Tentativa de realizar checkout sem adicionar produto no carrinho', () => {
+
+    
     cy.get('.product_sort_container')
     .select('Name (A to Z)')
     .should('have.value', 'az')
@@ -80,9 +69,7 @@ describe('template spec', () => {
     cy.get('[data-test="error"]')
     .should('be.visible')
     
-  
   })
-
 
 
 })
